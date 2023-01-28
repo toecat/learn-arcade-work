@@ -19,10 +19,6 @@ arcade.draw_polygon_filled(((500, 400),
                             (520, 360)
                             ),
                            arcade.csscolor.PURPLE)
-<<<<<<< HEAD
-=======
-
->>>>>>> 5358943dd7f9b2f0180ec3bd2caa87933576cce2
 arcade.draw_circle_filled(500, 550, 40, arcade.color.YELLOW)
 arcade.draw_line(500, 550, 400, 550, arcade.color.YELLOW, 3)
 arcade.draw_line(500, 550, 600, 550, arcade.color.YELLOW, 3)
@@ -32,7 +28,7 @@ arcade.draw_line(500, 550, 550, 600, arcade.color.YELLOW, 3)
 arcade.draw_line(500, 550, 550, 500, arcade.color.YELLOW, 3)
 arcade.draw_line(500, 550, 450, 600, arcade.color.YELLOW, 3)
 arcade.draw_line(500, 550, 450, 500, arcade.color.YELLOW, 3)
-arcade.draw_text("Colorul Trees!",
+arcade.draw_text("Colorful Trees!",
                  150, 230,
                  arcade.color.BLACK, 24)
 arcade.finish_render()
