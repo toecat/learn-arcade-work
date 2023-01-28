@@ -19,7 +19,6 @@ arcade.draw_polygon_filled(((500, 400),
                             (520, 360)
                             ),
                            arcade.csscolor.PURPLE)
-
 arcade.draw_circle_filled(500, 550, 40, arcade.color.YELLOW)
 arcade.draw_line(500, 550, 400, 550, arcade.color.YELLOW, 3)
 arcade.draw_line(500, 550, 600, 550, arcade.color.YELLOW, 3)
