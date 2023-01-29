@@ -2,6 +2,7 @@ import arcade
 arcade.open_window(800, 800, "Dog")
 arcade.set_background_color(arcade.csscolor.WHITE)
 arcade.start_render()
+# draws head
 arcade.draw_circle_filled(400, 400, 200, arcade.color.BEAVER)
 # draws ears
 arcade.draw_ellipse_filled(240, 300, 100, 420, arcade.color.BEAVER)
