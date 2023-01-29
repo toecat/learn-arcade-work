@@ -4,9 +4,12 @@ arcade.set_background_color(arcade.csscolor.WHITE)
 arcade.start_render()
 # draws head
 arcade.draw_circle_filled(400, 400, 200, arcade.color.BEAVER)
+arcade.draw_circle_outline(400, 400, 200, arcade.color.BLACK_BEAN)
 # draws ears
 arcade.draw_ellipse_filled(240, 300, 100, 420, arcade.color.BEAVER)
 arcade.draw_ellipse_filled(560, 300, 100, 420, arcade.color.BEAVER)
+arcade.draw_ellipse_outline(240, 300, 100, 420, arcade.color.BLACK_BEAN)
+arcade.draw_ellipse_outline(560, 300, 100, 420, arcade.color.BLACK_BEAN)
 # draws eyes
 arcade.draw_circle_filled(350, 450, 40, arcade.color.WHITE)
 arcade.draw_circle_filled(450, 450, 40, arcade.color.WHITE)
