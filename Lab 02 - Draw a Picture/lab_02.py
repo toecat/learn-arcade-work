@@ -1,5 +1,5 @@
 import arcade
-arcade.open_window(600, 600, "Drawing Example")
+arcade.open_window(600, 600, "Colorful Trees")
 arcade.set_background_color(arcade.csscolor.SKY_BLUE)
 arcade.start_render()
 #draws the grass
