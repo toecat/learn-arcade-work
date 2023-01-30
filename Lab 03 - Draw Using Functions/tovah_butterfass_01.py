@@ -19,28 +19,30 @@ arcade.draw_polygon_outline(((750, 450),
                             (650, 650),
                             ),
                             arcade.csscolor.DARK_GREEN)
+
 #draws the sun
 arcade.draw_circle_filled(100, 700, 40, arcade.color.YELLOW)
 
 # draws head
 arcade.draw_circle_filled(400, 400, 200, arcade.color.BEAVER)
 arcade.draw_circle_outline(400, 400, 200, arcade.color.BLACK)
+
 # draws ears
 arcade.draw_ellipse_filled(235, 325, 100, 420, arcade.color.BEAVER)
 arcade.draw_ellipse_filled(565, 325, 100, 420, arcade.color.BEAVER)
 arcade.draw_ellipse_outline(235, 325, 100, 420, arcade.color.BLACK)
 arcade.draw_ellipse_outline(565, 325, 100, 420, arcade.color.BLACK)
+
 # draws eyes
 arcade.draw_circle_filled(350, 450, 40, arcade.color.WHITE)
 arcade.draw_circle_filled(450, 450, 40, arcade.color.WHITE)
 arcade.draw_circle_filled(350, 450, 20, arcade.color.BLACK)
 arcade.draw_circle_filled(450, 450, 20, arcade.color.BLACK)
+
 # draws nose
 arcade.draw_ellipse_filled(400, 380, 100, 50, arcade.color.PINK)
 arcade.draw_line(400, 300, 400, 400, arcade.color.PINK, 3)
 arcade.draw_arc_outline(400, 335, 70, 70, arcade.csscolor.PINK, 180, 360, border_width=5)
-arcade.draw_arc_outline(400, 600, 400, 300, (250,0,0,127), 0, 180, 100, 0)
-arcade.draw_arc_outline(400, 600, 400, 300, (240,10,10,117), 0, 180, 90, 0)
 
 arcade.finish_render()
 arcade.run()
