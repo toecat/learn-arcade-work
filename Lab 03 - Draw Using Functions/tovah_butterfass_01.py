@@ -2,8 +2,11 @@ import arcade
 arcade.open_window(800, 800, "Dog")
 arcade.set_background_color(arcade.csscolor.SKY_BLUE)
 arcade.start_render()
+
+
 arcade.draw_lrtb_rectangle_filled(0, 799, 400, 0, arcade.csscolor.LIGHT_GREEN )
-arcade.draw_lrtb_rectangle_outline(0, 799, 400, 0, arcade.csscolor.GREEN, border_width=5 )
+arcade.draw_lrtb_rectangle_outline(0, 799, 799, 399, arcade.csscolor.DARK_BLUE, border_width=2)
+arcade.draw_lrtb_rectangle_outline(0, 799, 400, 0, arcade.csscolor.GREEN, border_width=3 )
 
 # draws tree
 arcade.draw_rectangle_filled(700,400,60, 100, arcade.csscolor.SIENNA)
