@@ -24,7 +24,7 @@ arcade.draw_polygon_outline(((750, 450),
                             arcade.csscolor.DARK_GREEN)
 
 #draws the sun
-arcade.draw_circle_filled(100, 700, 40, arcade.color.YELLOW)
+arcade.draw_circle_filled(100, 700, 70, (235,250,140,200))
 
 # draws head
 arcade.draw_circle_filled(400, 400, 200, arcade.color.BEAVER)
