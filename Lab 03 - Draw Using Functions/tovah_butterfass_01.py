@@ -9,7 +9,7 @@ arcade.draw_lrtb_rectangle_outline(0, 799, 799, 399, arcade.csscolor.DARK_BLUE, 
 arcade.draw_lrtb_rectangle_outline(0, 799, 400, 0, arcade.csscolor.GREEN, border_width=3 )
 
 # draws tree
-arcade.draw_rectangle_filled(700,400,60, 100, arcade.csscolor.SIENNA)
+arcade.draw_rectangle_filled(700, 400, 60, 100, arcade.csscolor.SIENNA)
 arcade.draw_polygon_filled(((750, 450),
                             (800, 550),
                             (650, 450),
@@ -24,7 +24,7 @@ arcade.draw_polygon_outline(((750, 450),
                             arcade.csscolor.DARK_GREEN)
 
 #draws the sun
-arcade.draw_circle_filled(100, 700, 70, (235,250,140,200))
+arcade.draw_circle_filled(100, 700, 70, (235, 250, 140, 200))
 
 # draws head
 arcade.draw_circle_filled(400, 400, 200, arcade.color.BEAVER)
