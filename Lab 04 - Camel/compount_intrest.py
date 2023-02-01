@@ -1,0 +1,6 @@
+starting_value = int(input("What is the amount of money that you are starting with? "))
+compunded = int(input("What is the number of times it is going to be compounded per year? "))
+intrest_rate = int(input("What is the intrest rate? "))
+time = int(input("What is the amount of time? "))
+final_value = (starting_value) * (1 +((intrest_rate / 100) / compunded)) ** (compunded)*(time)
+print("Your final amount of money is", "$",final_value)
