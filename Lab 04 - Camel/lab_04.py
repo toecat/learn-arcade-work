@@ -1,3 +1,3 @@
-farenheight = int(input('enter temp in farenheight: '))
+farenheight = int(input('Enter the temperature in farenheight: '))
 celcius = (farenheight - 32) * (5/9)
 print("The temperature in celcius is", celcius)
