@@ -1,0 +1,8 @@
+famous_person = str("Martin Luther King Jr.")
+print(f"Hello {famous_person}, would you like to learn some Python today?")
+famous_person = famous_person.upper()
+print(f"{famous_person}")
+famous_person = famous_person.lower()
+print(f"{famous_person}")
+famous_person = famous_person.title()
+print(f"{famous_person}")
