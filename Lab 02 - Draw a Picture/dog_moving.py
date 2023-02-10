@@ -31,9 +31,8 @@ def on_draw(delta_time):
     
     draw_ball(on_draw.ball_x, 450, arcade.csscolor.YELLOW)
     draw_dog(on_draw.dog_x, 0)
-    #draw_ball(on_draw.ball_x, 450, arcade.csscolor.PINK)
 
-    
+
     on_draw.ball_x += 2
     on_draw.dog_x += 1
 
@@ -43,7 +42,7 @@ on_draw.ball_x = 550
 
 def main():
     arcade.open_window(SCREEN_WIDTH,SCREEN_HEIGHT, "Window")
-    arcade.set_background_color((48, 78, 240))
+    arcade.set_background_color((48, 98, 200))
     arcade.schedule(on_draw, 1/60)
     
     
