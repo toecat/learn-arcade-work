@@ -16,14 +16,14 @@ def draw_dog(x,y):
     arcade.draw_ellipse_filled(480+x, 430+y, 30, 70, arcade.color.BEAVER)
     arcade.draw_ellipse_outline(480+x, 430+y, 30, 70, arcade.color.BLACK)
     arcade.draw_lrtb_rectangle_filled(0, 799, 320, 0, arcade.csscolor.GREEN)
-def draw_sun():
-    arcade.draw_circle_filled(800, 800, 100, arcade.csscolor.YELLOW)
+def draw_sun(x,y):
+    arcade.draw_circle_filled(x, y, 100, arcade.csscolor.YELLOW)
 
 def draw_ball(x, y, z):
     arcade.draw_circle_filled(x, y, 10, z)
 def on_draw(delta_time):
     arcade.start_render()
-    draw_sun()
+    draw_sun(800, 800)
     tree(100, 400)
     tree(300, 400)
     tree(500, 400)
