@@ -31,8 +31,6 @@ def on_draw(delta_time):
     
     draw_ball(on_draw.ball_x, 450, arcade.csscolor.YELLOW)
     draw_dog(on_draw.dog_x, 0)
-
-
     on_draw.ball_x += 2
     on_draw.dog_x += 1
 
