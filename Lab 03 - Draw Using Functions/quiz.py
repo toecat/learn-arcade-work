@@ -10,24 +10,6 @@ else:
     print("No")
     print(correct)
 print()
-answer = int(input("How many states are there in the U.S.? "))
-if answer == 50:
-    print("Correct")
-    correct += 1
-    print(correct)
-else:
-    print("No")
-    print(correct)
-print()
-answer = str(input("Which state has the largest population? "))
-if answer.lower() == "california":
-    print("Correct")
-    correct += 1
-    print(correct)
-else:
-    print("No")
-    print(correct)
-print()
 answer = int(input("How old am I? "))
 if answer == 14:
     print("Correct")
@@ -40,6 +22,24 @@ print()
 answer = str(input("What is the best season? "))
 if answer.lower() == "summer" or answer.lower() == "spring" or answer.lower() == "fall":
     print("Yes")
+    correct += 1
+    print(correct)
+else:
+    print("No")
+    print(correct)
+print()
+answer = str(input("Who won the superbowl?"))
+if answer.lower() == "cheifs":
+    print("Correct")
+    correct += 1
+    print(correct)
+else:
+    print("No")
+    print(correct)
+print()
+answer = int(input("How many points did the Cheifs win by? "))
+if answer == 3:
+    print("Correct")
     correct += 1
     print(correct)
 else:
