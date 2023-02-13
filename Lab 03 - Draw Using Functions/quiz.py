@@ -28,7 +28,7 @@ else:
     print("No")
     print(correct)
 print()
-answer = str(input("Who won the superbowl?"))
+answer = str(input("Who won the superbowl? "))
 if answer.lower() == "cheifs":
     print("Correct")
     correct += 1
