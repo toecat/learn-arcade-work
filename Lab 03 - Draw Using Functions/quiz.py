@@ -21,7 +21,7 @@ else:
 print()
 answer = str(input("Which football team is my favorite? "))
 if answer.lower() == "packers":
-    print("Yes")
+    print("Correct")
     correct += 1
     print(correct)
 else:
