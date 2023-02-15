@@ -2,7 +2,7 @@ import random
 print("Guess my number 1-100 in 10 tries!")
 x = random.randrange(1,100)
 num = int(input("What is your guess? "))
-for i in range(10) :
+for i in range(7) :
     
     if x>num:
         print("No. To small. ")
