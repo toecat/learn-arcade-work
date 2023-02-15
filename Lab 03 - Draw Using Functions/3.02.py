@@ -3,13 +3,13 @@ print("Guess my number 1-100 in 10 tries!")
 x = random.randrange(1,100)
 num = int(input("What is your guess? "))
 for i in range(10) :
-    print("No")
+    
     if x>num:
-        print("Your guess was to small. ")
+        print("No. To small. ")
         num = int(input("What is your guess? "))
 
     if x<num:
-        print("Your guess was to large. ")
+        print("No. To large. ")
         num = int(input("What is your guess? "))
     if num == x:
         print('Yes!')
