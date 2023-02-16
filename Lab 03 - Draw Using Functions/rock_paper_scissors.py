@@ -6,26 +6,33 @@ if x==0:
     x="paper"
 if x==2:
     x="scissors"
+def computer():
+    print("The computer chose", x)
 i = str(input("Choose rock, paper, or scissors: "))
+
 if i.lower()==x:
     print("The computer had the same as you. Please choose another one: ")
     i = str(input("Choose rock, paper, or scissors: "))
 if x=="rock" and i.lower()=="scissors":
-    print("The computer chose rock")
+    computer()
     print("The computer won")
-if x=="scissors" and i.lower()=="paper":
-    print("The computer chose scissors")
+elif x=="scissors" and i.lower()=="paper":
+    computer()
     print("The computer won")
-if x=="paper" and i.lower()=="rock":
-    print("The computer chose paper")
+elif x=="paper" and i.lower()=="rock":
+    computer()
     print("The computer won")
-if x=="scissors" and i.lower()=="rock":
-    print("The computer chose scissors")
+elif x=="scissors" and i.lower()=="rock":
+    computer()
     print("You won")
-if x=="paper" and i.lower()=="scissors":
-    print("The computer chose paper")
+elif x=="paper" and i.lower()=="scissors":
+    computer()
     print("You won")
-if x=="rock" and i.lower()=="paper":
-    print("The computer chose rock")
+elif x=="rock" and i.lower()=="paper":
+    computer()
     print("You won")
+elif i.lower()==x:
+    print("The computer had the same as you. Please choose another one: ")
+    i = str(input("Choose rock, paper, or scissors: "))
+
 
