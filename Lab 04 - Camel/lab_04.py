@@ -1,19 +1,24 @@
 import random
-print("Welcome to the world!")
-print("It is time to start your life and get away from your family.")
-print("Your parents are trying to catch you.")
-print("Run away from them without getting hurt:")
-
-
-print("hi")
-a = "Get a drink and eat some food"
-b = "Crawl ahead"
-c = "Run ahead"
-d = "Stop and take a nap"
+canteen = 6
+bandits = -20
+thirst = 0
+d = "Stop and rest"
 e = "Status check"
-q = quit
-x = str(input("Choose an option: "))
-if x=="a":
-    print("drink and food")
+q = "Quit"
+choice = str(input("Your choice? "))
+if choice=="a":
+    canteen-=1
+    bandits+=10
+    thirst-=1
+    
+
+    
+
+x = random.randrange(0,20)
+miles = x
+print(miles)
+x = random.randrange(0,20)
+miles = x+miles
+print(miles)
 
 
