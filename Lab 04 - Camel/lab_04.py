@@ -1,25 +1,11 @@
-import random
-canteen = 6
-bandits = -20
-thirst = 0
-tiredness = 0
-e = "Status check"
-q = "Quit"
-choice = str(input("Your choice? "))
-if choice=="a":
-    canteen-=1
-    bandits+=10
-    thirst-=1
-
-    
-
-    
-
-x = random.randrange(7,14)
-miles = x
-print(miles)
-x = random.randrange(7,14)
-miles = x+miles
-print(miles)
+for x in range(10):
+    print("Hi")
+for x in range(5):
+    print("Hello")
+for x in range(1):
+    print("There")
+for x in range(5):
+    print("Hello")
+    print("There")
 
 
