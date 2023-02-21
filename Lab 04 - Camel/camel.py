@@ -1,17 +1,17 @@
-print("Welcome to Camel!")
+print("Welcome to Fish!")
 import random
 done = False
 miles_traveled = 0
-thirst = 0
-camel_tired = 0
-bandits_travel = -20
-drink = 7
-bandits = random.randrange(0, 10)
+hunger = 0
+fish_tired = 0
+shark_travel = -20
+eat = 7
+sharks = random.randrange(0, 10)
 full_speed = random.randrange(10, 20)
 moderate_speed = random.randrange(5, 12)
 
 while not done:
-    print("A. Drink from your canteen .")
+    print("A. Eat from your backpack .")
     print("B. Ahead moderate speed.")
     print("C. Ahead full speed.")
     print("D. Stop for the night.")
@@ -24,58 +24,58 @@ while not done:
         done = True
     elif choice == "e":
         print ("Miles traveled:", miles_traveled)
-        print("Drinks in canteen:", drink)
-        print("The bandits are", (miles_traveled-bandits_travel), "behind you.")
-        print("Tiredness:", camel_tired)
-        print("Thirst level is:", thirst) 
+        print("Food in canteen:", eat)
+        print("The sharks are", (miles_traveled-shark_travel), "behind you.")
+        print("Tiredness:", fish_tired)
+        print("Hunger level is:", hunger) 
     elif choice == "d":
-        camel_tired = 0
-        print ("The camel is happy! And the bandits have moved", bandits, "miles while you were stoped" )
-        drink = 7
+        fish_tired = 0
+        print ("The fish is happy! And the sharks have moved", sharks, "miles while you were stoped" )
+        eat = 7
     elif choice == "c":
         print ("You have traveled", full_speed, "miles" )
         miles_traveled = miles_traveled + full_speed
-        bandits_travel = bandits_travel +  bandits
-        thirst = thirst + 1
-        camel_tired = random.randrange(1,3)
-        print ("Camel tiredness:", camel_tired)
-        print ("The bandits haved moved", bandits_travel, "miles in total.")
+        shark_travel = shark_travel +  sharks
+        hunger = hunger + 1
+        fish_tired = random.randrange(1,3)
+        print ("Fish tiredness:", fish_tired)
+        print ("The sharks haved moved", shark_travel, "miles in total.")
         print("You have moved", miles_traveled,"miles in total.")
     elif choice == "b":
         print ("you have traveled",moderate_speed, "miles")
         miles_traveled += full_speed
-        bandits_travel += bandits
-        thirst += 1
-        camel_tired = camel_tired + random.randrange(1,3)
-        print ("Camel tiredness: ", camel_tired)
-        print ("The bandits have moved", bandits_travel,"miles in total.")
+        shark_travel += sharks
+        hunger += 1
+        fish_tired = fish_tired + random.randrange(1,3)
+        print ("Fish tiredness: ", fish_tired)
+        print ("The sharks have moved", shark_travel,"miles in total.")
         print("You have moved", miles_traveled,"miles in total.")
     elif choice == "a":
-        print ("You drank from your canteen")
-        drink = drink - 1
-        thirst = 0
-    if thirst >= 3 :
-        print ("You are thirsty. Drink water.")
-    if thirst >= 5 :
-        print ("You died of thirst.")
+        print ("You ate from your backpack")
+        eat = eat - 1
+        hunger = 0
+    if hunger >= 3 :
+        print ("You are hungry. Eat from your backpack.")
+    if hunger >= 5 :
+        print ("You died of hunger.")
         done = True
-    if camel_tired >= 5:
-        print ("Your camel is tired. You better take a break.")
-    if camel_tired >= 8:
-        print ("Your camel is dead")
+    if fish_tired >= 5:
+        print ("Your fish is tired. You better take a break.")
+    elif fish_tired >= 8:
+        print ("Your fish is dead")
         done = True
-    if bandits_travel >= miles_traveled:
-        print ("The bandits caught you")
+    if shark_travel >= miles_traveled:
+        print ("The sharks caught you")
         done = True
-    elif bandits_travel >= miles_traveled-10:
-        print ("The bandits getting close")
+    elif shark_travel >= miles_traveled-30:
+        print ("The sharks getting close")
     if miles_traveled >= 300:
         print ("You won!")
         done = True
-    if drink <= 0:
-        print ("You are out of drinks.")
-        thirst = 0
-        drink = done
+    if eat <= 0:
+        print ("You are out of food.")
+        hunger = 0
+        eat = done
     
         
 
