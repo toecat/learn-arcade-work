@@ -4,7 +4,7 @@ done = False
 miles_traveled = 0
 hunger = 0
 fish_tired = 0
-shark_travel = -20
+shark_travel = -10
 eat = 7
 sharks = random.randrange(0, 10)
 full_speed = random.randrange(10, 20)
@@ -24,7 +24,7 @@ while not done:
         done = True
     elif choice == "e":
         print ("Miles traveled:", miles_traveled)
-        print("Food in canteen:", eat)
+        print("Food in backpack:", eat)
         print("The sharks are", (miles_traveled-shark_travel), "behind you.")
         print("Tiredness:", fish_tired)
         print("Hunger level is:", hunger) 
@@ -38,7 +38,6 @@ while not done:
         shark_travel = shark_travel +  sharks
         hunger = hunger + 1
         fish_tired = random.randrange(1,3)
-        print ("Fish tiredness:", fish_tired)
         print ("The sharks haved moved", shark_travel, "miles in total.")
         print("You have moved", miles_traveled,"miles in total.")
     elif choice == "b":
@@ -54,20 +53,22 @@ while not done:
         print ("You ate from your backpack")
         eat = eat - 1
         hunger = 0
+    
+    if hunger >= 5:
+        print ("You died of hunger.")
+        done=True
     if hunger >= 3 :
         print ("You are hungry. Eat from your backpack.")
-    if hunger >= 5 :
-        print ("You died of hunger.")
+
+    if fish_tired >= 8:
+        print ("Your fish is dead")
         done = True
     if fish_tired >= 5:
         print ("Your fish is tired. You better take a break.")
-    elif fish_tired >= 8:
-        print ("Your fish is dead")
-        done = True
     if shark_travel >= miles_traveled:
         print ("The sharks caught you")
         done = True
-    elif shark_travel >= miles_traveled-30:
+    if shark_travel >= miles_traveled-10:
         print ("The sharks getting close")
     if miles_traveled >= 300:
         print ("You won!")
