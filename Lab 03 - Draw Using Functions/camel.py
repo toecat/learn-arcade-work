@@ -1,5 +1,5 @@
-print("The sharks are trying to catch you! ")
-print("Move 300 miles to a safe spot before they catch you!")
+print("The sharks are trying to catch you. ")
+print("Move 300 miles to a safe spot before they catch up to you.")
 import random
 done = False
 miles_traveled = 0
@@ -48,7 +48,6 @@ while not done:
         print ("You have traveled", full_speed, "miles" )
         miles_traveled = miles_traveled + full_speed
         shark_travel +=  sharks
-        print("shark_travel:", shark_travel)
         hunger += 1
         fish_tired = fish_tired+random.randrange(1,3)
         print ("The sharks are" , miles_traveled-shark_travel,"miles behind you")
@@ -60,7 +59,6 @@ while not done:
         print ("You have traveled",moderate_speed, "miles")
         miles_traveled += full_speed
         shark_travel += sharks
-        print ("shark_travel:", shark_travel)
         hunger += 1
         fish_tired = fish_tired + random.randrange(1,3)
         print ("Fish tiredness: ", fish_tired)
