@@ -82,6 +82,7 @@ while not done:
     if fish_tired >= 6:
         print ("Your fish is dead")
         done = True
+        break
     if fish_tired >= 4:
         print ("Your fish is tired. You better take a break.")
     if shark_travel >= miles_traveled:
@@ -98,8 +99,3 @@ while not done:
         print ("You are out of food.")
         hunger = 0
         eat = done
-    
-        
-
-    
-    
