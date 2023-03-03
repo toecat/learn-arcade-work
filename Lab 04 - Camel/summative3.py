@@ -68,20 +68,7 @@ def draw_section_4():
         x+=20
         y=5
 def draw_section_5():
-    y=295
-    x=0
-    for row in range(30):
-        
-        x=5
-        for column in range(60):
-              
-            for row in range(30):
-                arcade.draw_rectangle_filled(x, y, 5, 5, arcade.color.WHITE)
-                
-            
-            x+=10
-        y+=5
-
+    pass
 def draw_section_6():
     pass
 def draw_section_7():
