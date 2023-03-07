@@ -68,13 +68,58 @@ def draw_section_4():
         x+=20
         y=5
 def draw_section_5():
-    pass
+    y=305
+    x=15
+    z=1    
+    for column in range(29):
+        for row in range(z):
+            arcade.draw_rectangle_filled(x, y, 5, 5, arcade.color.WHITE)
+            y+=10
+        y=305
+        z+=1    
+        x+=10
+            
+            
+    
 def draw_section_6():
-    pass
+    y=305
+    x=305
+    z=30    
+    for column in range(30):
+        for row in range(z):
+            arcade.draw_rectangle_filled(x, y, 5, 5, arcade.color.WHITE)
+            y+=10
+        y=305
+        z-=1    
+        x+=10
+            
+            
 def draw_section_7():
-    pass
+    y=305
+    x=605
+    z=1    
+    for row in range(30):
+        for column in range(z):
+            arcade.draw_rectangle_filled(x, y, 5, 5, arcade.color.WHITE)
+            x+=10
+        x=605
+        z+=1    
+        y+=10
+            
+            
 def draw_section_8():
-    pass
+    y=305
+    x=1195
+    z=1   
+    for row in range(30):
+        for column in range(z):
+            arcade.draw_rectangle_filled(x, y, 5, 5, arcade.color.WHITE)
+            x-=10
+        x=1195
+        z+=1    
+        y+=10
+            
+            
 def main():
     # Create a window
     arcade.open_window(1200, 600, "Lab 05 - Loopy Lab")
