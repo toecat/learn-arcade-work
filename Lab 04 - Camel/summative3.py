@@ -50,7 +50,6 @@ def draw_section_3():
         x+=5
     pass
 def draw_section_4():
-    # Use the modulus operator and just one 'if' statement to select the color.
     y=5
     
     x=905
