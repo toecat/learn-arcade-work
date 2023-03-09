@@ -24,5 +24,8 @@ print("Hello,", my_list[x], "you have been invited to my party")
 x+=1
 print("Hello,", my_list[x], "you have been invited to my party")
 
+popped_names=names.pop()
+print(popped_names)
+
 
 
