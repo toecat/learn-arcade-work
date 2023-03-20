@@ -1,29 +1,41 @@
-names = ["Chloe", "Kate", "Sloane", "Macie", "Grace"]
+names = ["Chloe", "Kate", "Sloane", "Max", "Grace"]
 
 for item in names:
     print(item)
 
-x=0
-print("Hello,", names[x], "you have been invited to my party")
-x+=1
-print("Hello,", names[x], "you have been invited to my party")
-x+=1
-print("Hello,", names[x], "you have been invited to my party")
-x+=1
-print("Hello,", names[x], "you have been invited to my party")
-x+=1
-print("Hello,", names[x], "you have been invited to my party")
+for name in names:
+    print("Hello,", name, "you have been invited to my dinner party")    
+#dinner = ["Elvis", "George Washingtion", "Thomas Eddison"]
+names.append("Elvis")
+names.append("George Washingtion")
+names.append("Thomas Eddison")
+for x in names:
+    print("Hello,", x, "you have been invited to my dinner party.")
+popped_dinner = names.pop()
+print(popped_dinner)
+names.insert(3, "Albert Einstein")
+for name in names:
+    print("Hello,", name, "you have been invited to my dinner party") 
+#for x in dinner:
+#    print("Hello,", x, "you have been invited to my dinner party.")
 
-my_list=["Alesha", "Cianna","Shelby"]
-for item in my_list:
-    print(item)
-x=0
-print("Hello,", my_list[x], "you have been invited to my party")
-x+=1
-print("Hello,", my_list[x], "you have been invited to my party")
-x+=1
-print("Hello,", my_list[x], "you have been invited to my party")
-names_popped =  names.pop(4)
-print(names_popped)
-for item in names:
-    print(item)
+print()
+names.insert(0,"Grandpa")
+names.insert(5,"Grandma")
+names.append("Dog")
+for name in names:
+    print("Hello,", name, "you have been invited to my dinner party")
+#for x in names:
+#    print("Hello,", x, "you have been invited to my dinner party.")
+print("My new dinner table wont arrive in time so I can only invite 2 of you.")
+#print(names)
+x = len(names)
+#print(x)
+while x > 2:
+    popped_dinner=names.pop()
+    print("Sorry,", popped_dinner,"I ran out of room for you at my party.")
+    x-=1
+for name in names:
+    print("Hello,", name, "you have still been invited to my dinner party.")
+del(names)
+
