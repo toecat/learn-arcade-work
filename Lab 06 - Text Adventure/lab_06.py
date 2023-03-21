@@ -5,7 +5,7 @@ for item in names:
 
 for name in names:
     print("Hello,", name, "you have been invited to my dinner party")    
-#dinner = ["Elvis", "George Washingtion", "Thomas Eddison"]
+print()
 names.append("Elvis")
 names.append("George Washingtion")
 names.append("Thomas Eddison")
@@ -16,8 +16,6 @@ print(popped_dinner)
 names.insert(3, "Albert Einstein")
 for name in names:
     print("Hello,", name, "you have been invited to my dinner party") 
-#for x in dinner:
-#    print("Hello,", x, "you have been invited to my dinner party.")
 
 print()
 names.insert(0,"Grandpa")
@@ -25,8 +23,7 @@ names.insert(5,"Grandma")
 names.append("Dog")
 for name in names:
     print("Hello,", name, "you have been invited to my dinner party")
-#for x in names:
-#    print("Hello,", x, "you have been invited to my dinner party.")
+
 print("My new dinner table wont arrive in time so I can only invite 2 of you.")
 #print(names)
 x = len(names)
@@ -38,4 +35,3 @@ while x > 2:
 for name in names:
     print("Hello,", name, "you have still been invited to my dinner party.")
 del(names)
-
