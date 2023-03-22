@@ -4,7 +4,7 @@ import numpy as np
 import pandas as pd
 #read the diamonds CSV file
 #build a DataFrame from the data
-df = pd.read_csv('diamonds.csv')
+df = pd.read_csv('Lab 06 - Text Adventure/diamonds.csv')
 print(df.head(10))
 print()
 #calculate the total value of the diamonds
