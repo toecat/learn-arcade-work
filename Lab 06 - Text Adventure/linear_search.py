@@ -8,7 +8,7 @@ def linear_search(my_list, key):
     return(-1)
  
 
-        
+
 # -- Now if the function works, all these tests should pass:
 my_list = [4, 3, 2, 1, 5, 7, 6]
 r = linear_search(my_list, 3)

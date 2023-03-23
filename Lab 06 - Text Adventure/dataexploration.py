@@ -1,2 +1,9 @@
-my_array= [5,76, 8,5,3,3,56,5,23]
-print(sum(my_array))
+my_list = [-2, 3, -4, -6]
+def detect_positive(list):
+    for element in list:
+        if element > 0:
+            return True
+    return False
+
+R = detect_positive(my_list)
+print(R)
