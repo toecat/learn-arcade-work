@@ -5,7 +5,7 @@ def linear_search(my_list, key):
         if item==key:
             return(my_list.index(key))
         
-    returns(-1)
+    return(-1)
  
 
         
