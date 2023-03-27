@@ -1,7 +1,6 @@
 import random
 my_list = [97,74,8,98,47,62,12,11,0,60]
 def selection_sort(my_list):
-    """ Sort a list using the selection sort """
 
     for cur_pos in range(len(my_list)):
 
@@ -12,7 +11,7 @@ def selection_sort(my_list):
             if my_list[scan_pos] < my_list[min_pos]:
 
                 min_pos = scan_pos
-
+        print(my_list)
         temp = my_list[min_pos]
         my_list[min_pos] = my_list[cur_pos]
         my_list[cur_pos] = temp
