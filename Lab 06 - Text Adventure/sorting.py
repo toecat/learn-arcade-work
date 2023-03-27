@@ -11,7 +11,7 @@ def selection_sort(my_list):
             if my_list[scan_pos] < my_list[min_pos]:
 
                 min_pos = scan_pos
-        print(my_list)
+        print_list(my_list)
         temp = my_list[min_pos]
         my_list[min_pos] = my_list[cur_pos]
         my_list[cur_pos] = temp
