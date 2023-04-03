@@ -12,9 +12,9 @@ def linear_search(w,dictionary_list):
 
         current_list_position += 1
 
-    if current_list_position < len(dictionary_list):
-        return
-
+        if current_list_position < len(dictionary_list):
+            return
+    print(w)
 def main():
  
     my_file = open("Lab 07 - User Control/dictionary.txt")
@@ -32,7 +32,7 @@ def main():
         word_list = split_line(aline)
         for word in word_list:
             linear_search(word, dictionary_list)
-            print(word)                        
+            #print(word)                        
 
    
     my_file.close()
