@@ -1,10 +1,16 @@
-animal_list = ["sloth", "dolphin", "turtle"]
 
-def story(animal_list,x,y):
-    print("The", animal_list[x], "is sleepy so it slept in the", animal_list[y],"bed")
-    x+=1
-    y+=1
-    print(x)
-    print(y)
-story(animal_list, 0, 1)
 
+def bedtimestory(animal_list,current,number): 
+    print(animal_list [current],"went to bed after reading a story to the", animal_list[current+1])                  
+    if current == number:
+        return
+    bedtimestory(animal_list,current+1,number)                   
+    print("and then the ", animal_list[current], "fell asleep.")                  
+   
+
+def main(): 
+
+    animal_list  = ["Mother","Sloth", "Dolphin", "Turtle", "Dog"]                
+    bedtimestory(animal_list, 0, 3);
+
+main()
