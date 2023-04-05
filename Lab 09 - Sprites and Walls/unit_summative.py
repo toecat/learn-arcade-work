@@ -5,4 +5,4 @@ class Room():
         self.east = 0
         self.south = 0
         self.south = 0
-        
+
