@@ -12,7 +12,6 @@ class Rectangle():
         self.change_y = random.randrange(-3,3)   
     
     def move(self): 
-        
         self.x += self.change_x
         self.y += self.change_y
         
