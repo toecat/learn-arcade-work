@@ -27,7 +27,6 @@ class Ellipse(Rectangle):
         arcade.draw_ellipse_filled(self.x, self.y, self.height, self.width, self.color)
 
 
-
 def main():
     arcade.open_window(700, 700, "Window")
     
