@@ -7,9 +7,9 @@ class Room():
         self.south = west
     
 
-def main():
+def main(descripton, north, east, south, west):
     room_list = []
-    room = Room("This is the bedroom", north, east, None, None)
+    room = Room("This is the bedroom", north, east, None, None
     room.append(room_list)
 
 main()
