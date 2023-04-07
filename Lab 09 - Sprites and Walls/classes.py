@@ -48,7 +48,7 @@ class Shapes(arcade.Window):
             if todraw == 2:
                 my_ellipse = Ellipse(x,y+random.randrange(70),width,height,change_x,change_y,[random.randrange(0,255),random.randrange(0,255),random.randrange(0,255)])
                 self.my_list.append(my_ellipse)
-
+    
     
     def update(self,dt):
         for shapes in self.my_list:
