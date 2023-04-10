@@ -32,7 +32,15 @@ def main():
     room_list.append(bathroom3)
     room_list.append(balcony)
     current_room = 0
-    print(room_list[current_room].description)
     done=False
+    user_input = input("Where would you like to go?")
+    if user_input == "north"():
+        print("hello")
+    while done != True:
+        print()
+        print(room_list[current_room].description)
+        done = True
+    #next_room = room_list(current_room).north
+
 
 main()
