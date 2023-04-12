@@ -4,7 +4,7 @@ class Room():
         self.north = north
         self.east = east
         self.south = south
-        self.south = west
+        self.west = west
 
 
 def main():
@@ -39,24 +39,43 @@ def main():
 
         user_input = input("Where would you like to go?")
 
-        done = True
 
-    if user_input.lower() == "north":
-        next_room = room_list[current_room].north
-        
-        print(next_room)
-        if next_room == None:
-            print("no")
-        next_room = current_room
-        print(current_room)
-    elif user_input.lower()=="south":
-        print("south")
-    elif user_input.lower()=="east":
-        print("east")
-    elif user_input.lower()=="west":
-        print("west")
-        
-    
+
+        if user_input.lower() == "north":
+            next_room = room_list[current_room].north
+            
+            print(next_room)
+            if next_room == None:
+                print("You cannot go that way.")
+            current_room = next_room
+            print(current_room)
+            print(room_list[current_room].description)
+
+
+        elif user_input.lower()=="south":
+            next_room = room_list[current_room].south
+            print("south")
+            if next_room == None:
+                print("You cannot go that way.")
+            current_room = next_room
+
+
+        elif user_input.lower()=="east":
+            
+            next_room = room_list[current_room].east
+            if next_room == None:
+                print("You cannot go that way.")
+            current_room = next_room
+            print(room_list[current_room].description)
+
+
+        elif user_input.lower()=="west":
+            next_room = room_list[current_room].west
+            print("west")
+            if next_room == None:
+                print("You cannot go that way.")
+            current_room = next_room
+
 
 
 main()
