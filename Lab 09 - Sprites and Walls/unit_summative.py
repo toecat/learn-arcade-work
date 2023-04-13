@@ -8,38 +8,50 @@ class Room():
 
 class Item():
     def __init__(self, short_name, long, room_number):
-        items = ["beach ball", "shovel", 'bucket', "goggles"]
         self.short_name = short_name
         self.long = long
         self.room_number = room_number
-        short_name = items[0]
+        
+ball =  Item("ball", "There is a beach ball in this room", 3)
+towel = Item("towel", "There is a beach towel in this room", 9)
+umbrella = Item("umbrella", "There is a beach umbrealla on the balcony", 10)
+swimsuit = Item("swimsuit", "There is a swimsuit in this bedroom", 2)
 
+
+items=[]
+items.append(ball)
+items.append(towel)
+items.append(umbrella)
+items.append(swimsuit)
+
+
+print(items[0].short_name)
 
 
 def main():
     room_list = []
 
-    bathroom = Room("You are in bathroom 1. There is a door to the north and east.", 9, 1, None, None) 
+    bathroom = Room("You are in bathroom 1. \nThere is a door to the north and east.", 9, 1, None, None) 
     room_list.append(bathroom)
-    bedroom = Room("You are in bedroom 1. There is a door to the north, east, and west.", 8, 2, None, 0)
+    bedroom = Room("You are in bedroom 1. \nThere is a door to the north, east, and west.", 8, 2, None, 0)
     room_list.append(bedroom)
-    southhallway = Room("You are in the south hallway. There is a door to the north, east, and west.", 7, 3, None, 1)
+    southhallway = Room("You are in the south hallway. \nThere is a door to the north, east, and west.", 7, 3, None, 1)
     room_list.append(southhallway)
-    kitchen = Room("You are in the kitchen. There is a door to the north and west.", 4, None, None,2)  
+    kitchen = Room("You are in the kitchen. \nThere is a door to the north and west.", 4, None, None,2)  
     room_list.append(kitchen)
-    livingroom = Room("You are in the living room. There is a door to the north, south, and west.", 5, None,3,7)
+    livingroom = Room("You are in the living room. \nThere is a door to the north, south, and west.", 5, None,3,7)
     room_list.append(livingroom)
-    diningroom = Room("You are in the dining room. There is a door to the north, south, and west.",6, None, 4, 10)
+    diningroom = Room("You are in the dining room. \nThere is a door to the north, south, and west.",6, None, 4, 10)
     room_list.append(diningroom)
-    bedroom2 = Room("You are in bedroom 2. There is a door to the south.", None, None,5, None)
+    bedroom2 = Room("You are in bedroom 2. \nThere is a door to the south.", None, None,5, None)
     room_list.append(bedroom2)
-    northhallway = Room("You are in the north hallway. There is a door to the north, east, south, and west.", 10, 4, 2, 8)
+    northhallway = Room("You are in the north hallway. \nThere is a door to the north, east, south, and west.", 10, 4, 2, 8)
     room_list.append(northhallway)
-    bedroom3 = Room("You are in bedroom 3. There is a door to the east, south and west.", None,7,1,9)
+    bedroom3 = Room("You are in bedroom 3. \nThere is a door to the east, south and west.", None,7,1,9)
     room_list.append(bedroom3)
-    bathroom3 = Room("You are in bathroom 3. There is a door to the east and south.", None, 8, 0, None)
+    bathroom3 = Room("You are in bathroom 3. \nThere is a door to the east and south.", None, 8, 0, None)
     room_list.append(bathroom3)
-    balcony = Room("You are on the balcony. There is a door to the south.", None, None, 7, None)
+    balcony = Room("You are on the balcony. \nThere is a door to the south.", None, None, 7, None)
     room_list.append(balcony)
     current_room = 0
     done=False
@@ -49,7 +61,7 @@ def main():
 
 
     while done != True:
-        user_input = input("Where would you like to go? ")
+        user_input = input("What would you like to do? ")
         print()
 
         if user_input.lower() == "north":
@@ -60,7 +72,7 @@ def main():
                 print()
                 continue
             current_room = next_room
-            print(room_list[current_room].description)
+            print(room_list[current_room].description)  
             continue
 
 
