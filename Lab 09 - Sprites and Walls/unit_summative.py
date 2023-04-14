@@ -11,27 +11,17 @@ class Item():
         self.short_name = short_name
         self.long = long
         self.room_number = room_number
+        self.locked = False
         
-ball =  Item("ball", "There is a beach ball in this room", 3)
-towel = Item("towel", "There is a beach towel in this room", 9)
-umbrella = Item("umbrella", "There is a beach umbrealla on the balcony", 10)
-swimsuit = Item("swimsuit", "There is a swimsuit in this bedroom", 2)
 
 
-items=[]
-items.append(ball)
-items.append(towel)
-items.append(umbrella)
-items.append(swimsuit)
-
-
-print(items[0].short_name)
 
 
 def main():
     room_list = []
 
     bathroom = Room("You are in bathroom 1. \nThere is a door to the north and east.", 9, 1, None, None) 
+    bathroom.locked = True
     room_list.append(bathroom)
     bedroom = Room("You are in bedroom 1. \nThere is a door to the north, east, and west.", 8, 2, None, 0)
     room_list.append(bedroom)
@@ -54,16 +44,51 @@ def main():
     balcony = Room("You are on the balcony. \nThere is a door to the south.", None, None, 7, None)
     room_list.append(balcony)
     current_room = 0
+    key =  Item("key", "There is a key in this room", 2)
+    paper = Item("paper", "There is a piece in this room", 9)
+    rusty_key = Item("rusty", "There is a rusty key on the balcony", 10)
+    clothes = Item("clothes", "There is clothes in this bedroom", 1)
+
+
+    items=[]
+    items.append(key)
+    items.append(paper)
+    items.append(rusty_key)
+    items.append(clothes)
     done=False
+    x=0
     
+    
+    
+    
+        
     print()
     print(room_list[current_room].description)
 
 
     while done != True:
+        x=0
+        while x<4:
+                
+            if items[x].room_number == current_room:
+                print(items[x].long)
+            x+=1
+                
         user_input = input("What would you like to do? ")
         print()
 
+        command_words = user_input.split(" ")
+
+        if command_words[0] == "grab":
+            print("I picked up the item")
+
+            continue
+
+        if room_list[current_room] == True:
+            print("you cannot go this way")
+
+
+            
         if user_input.lower() == "north":
             next_room = room_list[current_room].north
             
@@ -74,7 +99,7 @@ def main():
             current_room = next_room
             print(room_list[current_room].description)  
             continue
-
+        
 
         elif user_input.lower()=="south":
             next_room = room_list[current_room].south
@@ -112,6 +137,8 @@ def main():
             continue
         elif user_input.lower()=="quit":
             break
+
+        
 
 
 main()
