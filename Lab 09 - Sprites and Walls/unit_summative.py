@@ -78,13 +78,20 @@ def main():
                 break   
             x+=1
         if current_room == 10:
-            print("are you ready to fight the dragon?")
-            if user_input = "yes":
+            user_inputs = input("Are you ready to fight the dragon?")
+            if user_inputs == "yes":
                 for item in items:
-                    
+                    if item.room_number == -1:
+                        print("i have tiems")
+
+
+
 
         user_input = input("What would you like to do? ")
         print()
+
+        
+
 
         command_words = user_input.split(" ")
         if command_words[0] == "grab":
