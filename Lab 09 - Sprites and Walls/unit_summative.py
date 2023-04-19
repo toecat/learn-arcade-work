@@ -1,5 +1,5 @@
-
-print("Find the key and unlock the door but make sure you are ready to fight the dragon. \nYou might want camoflauge clothes, a sword, and food to help you succeed in your mission.\nGo searching around different rooms to try and find these items before you fight the dragon.\nIf you would like to see what you have type invenotry. \nIf you would like to pick something up, type grab, then the item name such as clothes.\nTo type the direction that you would like to go type either north, east, south, or west.\nIf you would like to quit type quit.")
+print()
+print("Find the key and unlock the door but make sure you are ready to fight the dragon. \nYou might want camoflauge clothes, a sword, and food to help you succeed in your mission.\nGo searching around different rooms to try and find these items before you fight the dragon.\nIf you would like to see what you have type invenotry. \nIf you would like to pick something up, type grab, then the item name such as clothes.\nIf you would like to drop something type drop, then the items name.\nTo type the direction that you would like to go type either north, east, south, or west.\nIf you would like to use a item type use then the items name.\nIf you would like to quit type quit.")
 
 class Room():
     def __init__(self,description, north, east, south, west, locked):
@@ -79,7 +79,7 @@ def main():
                 break
             x+=1
         if current_room == 10:
-            print("You inventory includes:", items_held.short_name)
+            print("You inventory includes:", items_held)
             ask = input("What would you like to use from your inventory to fight the dragon:")
             if ask == "clothes":
                 print("You were able to camoflauge yourself and get behind the dragon and get the treasure.")
