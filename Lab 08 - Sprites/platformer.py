@@ -5,15 +5,15 @@ import arcade
 
 # Constants
 SCREEN_WIDTH = 1000
-SCREEN_HEIGHT = 650
+SCREEN_HEIGHT = 800
 SCREEN_TITLE = "Platformer"
 
 # Constants used to scale our sprites from their original size
 CHARACTER_SCALING = 1
-TILE_SCALING = 0.5
+TILE_SCALING = 1
 
 # Movement speed of player, in pixels per frame
-PLAYER_MOVEMENT_SPEED = 5
+PLAYER_MOVEMENT_SPEED = 10
 
 
 class MyGame(arcade.Window):
@@ -35,7 +35,7 @@ class MyGame(arcade.Window):
         # Our physics engine
         self.physics_engine = None
 
-        arcade.set_background_color(arcade.csscolor.CORNFLOWER_BLUE)
+        arcade.set_background_color(arcade.csscolor.YELLOW_GREEN)
 
     def setup(self):
         """Set up the game here. Call this function to restart the game."""
@@ -63,7 +63,6 @@ class MyGame(arcade.Window):
         coordinate_list = [[512, 96], [256, 96], [768, 96]]
 
         for coordinate in coordinate_list:
-            # Add a crate on the ground
             wall = arcade.Sprite(
                 ":resources:images/tiles/boxCrate_double.png", TILE_SCALING
             )
