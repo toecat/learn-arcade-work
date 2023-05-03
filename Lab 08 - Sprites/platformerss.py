@@ -66,14 +66,7 @@ class MyGame(arcade.Window):
         # Name of map file to load
         map_name = ":resources:tiled_maps/map.json"
 
-        # Layer specific options are defined based on Layer names in a dictionary
-        # Doing this will make the SpriteList for the platforms layer
-        # use spatial hashing for detection.
-        layer_options = {
-            "Platforms": {
-                "use_spatial_hash": True,
-            },
-        }
+        layer_options = {"Platforms": {"use_spatial_hash": True,},}
 
         # Read in the tiled map
         self.tile_map = arcade.load_tilemap(map_name, TILE_SCALING, layer_options)
@@ -189,5 +182,4 @@ def main():
     arcade.run()
 
 
-if __name__ == "__main__":
-    main()
+main()

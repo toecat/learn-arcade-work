@@ -40,7 +40,6 @@ class MyGame(arcade.Window):
         """
 
         super().__init__(SCREEN_WIDTH, SCREEN_HEIGHT, SCREEN_TITLE)
-
         # Set the path to start with this program
         file_path = os.path.dirname(os.path.abspath(__file__))
         os.chdir(file_path)
@@ -55,6 +54,7 @@ class MyGame(arcade.Window):
 
         self.camera = None
 
+
         # A Camera that can be used to draw GUI elements
         self.gui_camera = None
 
@@ -64,9 +64,10 @@ class MyGame(arcade.Window):
         self.score = 0
 
         # Load sounds
-        self.collect_coin_sound = arcade.load_sound(":resources:sounds/coin1.wav")
+        #self.collect_coin_sound = arcade.load_sound(":resources:sounds/coin1.wav")
         self.jump_sound = arcade.load_sound(":resources:sounds/jump1.wav")
         self.game_over = arcade.load_sound(":resources:sounds/gameover1.wav")
+        self.collect_coin_sound = arcade.load_sound(":resources:sounds/coin1.wav")
 
     def setup(self):
         """Set up the game here. Call this function to restart the game."""
@@ -74,7 +75,7 @@ class MyGame(arcade.Window):
         self.camera = arcade.Camera(self.width, self.height)
         self.gui_camera = arcade.Camera(self.width, self.height)
 
-        map_name = ":resources:tiled_maps/map_with_ladders.json"
+        map_name = ":resources:tiled_maps/map.json"
 
         layer_options = {
             LAYER_NAME_PLATFORMS: {
@@ -204,11 +205,8 @@ class MyGame(arcade.Window):
 
 
 def main():
-    """Main function"""
     window = MyGame()
     window.setup()
     arcade.run()
 
-
-if __name__ == "__main__":
-    main()
+main()
