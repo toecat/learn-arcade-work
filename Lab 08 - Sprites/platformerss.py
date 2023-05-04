@@ -64,7 +64,7 @@ class MyGame(arcade.Window):
         self.gui_camera = arcade.Camera(self.width, self.height)
 
         # Name of map file to load
-        map_name = ":resources:tiled_maps/map.json"
+        map_name = "Lab 08 - Sprites/map.json"
 
         layer_options = {"Platforms": {"use_spatial_hash": True,},}
 
