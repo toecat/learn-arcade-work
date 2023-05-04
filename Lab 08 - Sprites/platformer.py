@@ -75,7 +75,7 @@ class MyGame(arcade.Window):
         self.camera = arcade.Camera(self.width, self.height)
         self.gui_camera = arcade.Camera(self.width, self.height)
 
-        map_name = "Lab 10 - Spell Check/ map.json"
+        map_name = "Lab 10 - Spell Check/map.json"
 
         layer_options = {
             LAYER_NAME_PLATFORMS: {
