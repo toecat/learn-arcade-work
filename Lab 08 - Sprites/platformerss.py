@@ -1,16 +1,12 @@
 import arcade
 import pathlib
 
-# Game constants
-# Window dimensions
 SCREEN_WIDTH = 1000
 SCREEN_HEIGHT = 650
 SCREEN_TITLE = "Arcade Platformer"
 
-# Scaling constants
 MAP_SCALING = 1.0
 
-# Player constants
 GRAVITY = 1.0
 PLAYER_START_X = 65
 PLAYER_START_Y = 256
@@ -21,14 +17,12 @@ RIGHT_VIEWPORT_MARGIN = 300
 TOP_VIEWPORT_MARGIN = 150
 BOTTOM_VIEWPORT_MARGIN = 150
 
-# Assets path
 ASSETS_PATH = pathlib.Path(__file__).resolve().parent.parent / "assets"
 
 class Platformer(arcade.Window):
     def __init__(self) -> None:
         super().__init__(SCREEN_WIDTH, SCREEN_HEIGHT, SCREEN_TITLE)
 
-        # These lists will hold different sets of sprites
         self.coins = None
         self.background = None
         self.walls = None
@@ -36,19 +30,14 @@ class Platformer(arcade.Window):
         self.goals = None
         self.enemies = None
 
-        # One sprite for the player, no more is needed
         self.player = None
 
-        # We need a physics engine as well
         self.physics_engine = None
 
-        # Someplace to keep score
         self.score = 0
 
-        # Which level are we on?
         self.level = 1
 
-        # Load up our sounds here
         self.coin_sound = arcade.load_sound(
             str(ASSETS_PATH / "sounds" / "coin.wav")
         )
@@ -59,23 +48,18 @@ class Platformer(arcade.Window):
             str(ASSETS_PATH / "sounds" / "victory.wav")
         )   
 def setup(self) -> None:
-    """Sets up the game for the current level"""
 
-    # Get the current map based on the level
     map_name = f"platform_level_{self.level:02}.tmx"
     map_path = ASSETS_PATH / map_name
 
-    # What are the names of the layers?
     wall_layer = "ground"
     coin_layer = "coins"
     goal_layer = "goal"
     background_layer = "background"
     ladders_layer = "ladders"
 
-    # Load the current map
     game_map = arcade.tilemap.read_tmx(str(map_path))
 
-    # Load the layers
     self.background = arcade.tilemap.process_layer(
         game_map, layer_name=background_layer, scaling=MAP_SCALING
     )
@@ -343,8 +327,6 @@ def scroll_viewport(self) -> None:
     if self.player.bottom < bottom_boundary:
         self.view_bottom -= bottom_boundary - self.player.bottom
 
-    # Only scroll to integers. Otherwise we end up with pixels that
-    # don't line up on the screen.
     self.view_bottom = int(self.view_bottom)
     self.view_left = int(self.view_left)
 
