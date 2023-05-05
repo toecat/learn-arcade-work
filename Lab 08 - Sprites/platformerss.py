@@ -193,6 +193,26 @@ def on_draw(self) -> None:
     self.ladders.draw()
     self.player.draw()
 
+    # Draw the score in the lower left
+    score_text = f"Score: {self.score}"
+
+    # First a black background for a shadow effect
+    arcade.draw_text(
+        score_text,
+        start_x=10 + self.view_left,
+        start_y=10 + self.view_bottom,
+        color=arcade.csscolor.BLACK,
+        font_size=40,
+    )
+    # Now in white, slightly shifted
+    arcade.draw_text(
+        score_text,
+        start_x=15 + self.view_left,
+        start_y=15 + self.view_bottom,
+        color=arcade.csscolor.WHITE,
+        font_size=40,
+    )
+
 def on_update(self, delta_time: float) -> None:
     """Updates the position of all game objects
 
@@ -268,10 +288,7 @@ def on_key_press(self, key: int, modifiers: int) -> None:
             arcade.play_sound(self.jump_sound)
 
 def on_key_release(self, key: int, modifiers: int) -> None:
-    """Arguments:
-    key -- The key which was released
-    modifiers -- Which modifiers were down at the time
-    """
+  
 
     # Check for player left or right movement
     if key in [
