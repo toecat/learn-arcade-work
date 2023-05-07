@@ -1,6 +1,3 @@
-"""
-Platformer Game
-"""
 import arcade
 
 # Constants
@@ -18,6 +15,7 @@ GRAVITY = 1
 PLAYER_JUMP_SPEED = 20
 
 
+
 class MyGame(arcade.Window):
     """
     Main application class.
@@ -27,6 +25,9 @@ class MyGame(arcade.Window):
 
         # Call the parent class and set up the window
         super().__init__(SCREEN_WIDTH, SCREEN_HEIGHT, SCREEN_TITLE)
+        
+        # Our TileMap Object
+        self.tile_map = None
 
         # Our Scene Object
         self.scene = None
@@ -39,14 +40,35 @@ class MyGame(arcade.Window):
 
         # A Camera that can be used for scrolling the screen
         self.camera = None
+        
+        self.gui_camera = None
+
 
         arcade.set_background_color(arcade.csscolor.CORNFLOWER_BLUE)
 
     def setup(self):
         """Set up the game here. Call this function to restart the game."""
 
-        # Set up the Camera
-        self.camera = arcade.Camera(self.width, self.height)
+ 
+
+        # Name of map file to load
+        map_name = ":resources:tiled_maps/level_1.json"
+        
+        # Layer specific options are defined based on Layer names in a dictionary
+        # Doing this will make the SpriteList for the platforms layer
+        # use spatial hashing for detection.
+        layer_options = {
+            "Platforms": {"use_spatial_hash": True,},
+            "Coins" : {"use_spatial_hash": True,}
+        }
+
+        # Read in the tiled map
+        self.tile_map = arcade.load_tilemap(map_name, TILE_SCALING, layer_options)
+
+        # Initialize Scene with our TileMap, this will automatically add all layers
+        # from the map as SpriteLists in the scene in the proper order.
+        self.scene = arcade.Scene.from_tilemap(self.tile_map)
+
 
         # Initialize Scene
         self.scene = arcade.Scene()
@@ -61,30 +83,24 @@ class MyGame(arcade.Window):
         self.player_sprite.center_y = 96
         self.scene.add_sprite("Player", self.player_sprite)
 
-        # Create the ground
-        # This shows using a loop to place multiple sprites horizontally
-        for x in range(0, 1250, 64):
-            wall = arcade.Sprite(":resources:images/tiles/grassMid.png", TILE_SCALING)
-            wall.center_x = x
-            wall.center_y = 32
-            self.scene.add_sprite("Walls", wall)
+        self.wall_list = self.tile_map.sprite_lists["Platforms"]
+        self.coin_list = self.tile_map.sprite_lists["Coins"]
 
-        # Put some crates on the ground
-        # This shows using a coordinate list to place sprites
-        coordinate_list = [[512, 96], [256, 96], [768, 96]]
+        #Set the background color
+        if self.tile_map.background_color:
+            arcade.set_background_color(self.tile_map.background_color)
 
-        for coordinate in coordinate_list:
-            # Add a crate on the ground
-            wall = arcade.Sprite(
-                ":resources:images/tiles/boxCrate_double.png", TILE_SCALING
-            )
-            wall.position = coordinate
-            self.scene.add_sprite("Walls", wall)
+        walls = [self.wall_list,]
+        self.physics_engine = arcade.PhysicsEnginePlatformer(self.player_sprites, walls, gravity_constant=GRAVITY)
 
-        # Create the 'physics engine'
+       # Set up the Camera
+        self.camera = arcade.Camera(self.width, self.height)
+        self.gui_camera = arcade.Camera(self.width, self.height)
+
+         # Create the 'physics engine'
         self.physics_engine = arcade.PhysicsEnginePlatformer(
             self.player_sprite, gravity_constant=GRAVITY, walls=self.scene["Walls"]
-        )
+        ) 
 
     def on_draw(self):
         """Render the screen."""
