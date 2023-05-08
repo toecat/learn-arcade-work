@@ -91,7 +91,7 @@ class MyGame(arcade.Window):
             arcade.set_background_color(self.tile_map.background_color)
 
         walls = [self.wall_list,]
-        self.physics_engine = arcade.PhysicsEnginePlatformer(self.player_sprites, walls, gravity_constant=GRAVITY)
+        self.physics_engine = arcade.PhysicsEnginePlatformer(self.player_sprite, walls, gravity_constant=GRAVITY)
 
        # Set up the Camera
         self.camera = arcade.Camera(self.width, self.height)

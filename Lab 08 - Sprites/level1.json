@@ -385,7 +385,7 @@
          "encoding":"base64",
          "height":32,
          "id":1,
-         "name":"ground",
+         "name":"Platform",
          "opacity":1,
          "startx":-16,
          "starty":-16,
