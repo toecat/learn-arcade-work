@@ -46,7 +46,7 @@ class MyGame(arcade.Window):
         self.camera_sprites = arcade.Camera(self.width, self.height)
         self.camera_gui = arcade.Camera(self.width, self.height)
 
-        map_name = ":resources:tiled_maps/level2T.json"
+        map_name = ":resources:tiled_maps/level2.json"
 
         layer_options = {
             "Platforms": {
