@@ -46,7 +46,7 @@ class MyGame(arcade.Window):
         self.camera_sprites = arcade.Camera(self.width, self.height)
         self.camera_gui = arcade.Camera(self.width, self.height)
 
-        map_name = ":resources:tiled_maps/level2.json"
+        map_name = ":resources:tiled_maps/game_map1.json"
 
         layer_options = {
             "Platforms": {
@@ -100,7 +100,6 @@ class MyGame(arcade.Window):
             self.player_sprite.change_x = PLAYER_MOVEMENT_SPEED
 
     def on_key_press(self, key, modifiers):
-        """Called whenever a key is pressed."""
 
         if key == arcade.key.UP or key == arcade.key.W:
             if self.physics_engine.can_jump():

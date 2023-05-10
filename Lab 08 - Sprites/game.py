@@ -52,7 +52,7 @@ class MyGame(arcade.Window):
  
 
         # Name of map file to load
-        map_name = ":resources:tiled_maps/level_1.json"
+        map_name = ":resources:tiled_maps/game_map1.json"
         
         # Layer specific options are defined based on Layer names in a dictionary
         # Doing this will make the SpriteList for the platforms layer
