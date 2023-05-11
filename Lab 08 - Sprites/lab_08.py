@@ -41,6 +41,14 @@ class MyGame(arcade.Window):
         self.left_key_down = False
         self.right_key_down = False
 
+        self.end_of_map = 0
+        self.level = 1
+        self.collect_coin_sound = arcade.load_sound(":resources:sounds/coin1.wav")
+        self.jump_sound = arcade.load_sound(":resources:sounds/jump1.wav")
+        self.game_over = arcade.load_sound(":resources:sounds/gameover1.wav")
+        self.reset_score = True
+        
+
     def setup(self):
 
         self.camera_sprites = arcade.Camera(self.width, self.height)
