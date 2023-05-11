@@ -5,15 +5,15 @@ SCREEN_TITLE = "Platformer"
 SCREEN_WIDTH = 1000
 SCREEN_HEIGHT = 650
 
-CHARACTER_SCALING = 0.3
-TILE_SCALING = 1
+CHARACTER_SCALING = .8
+TILE_SCALING = 3
 COIN_SCALING = 0.5
 SPRITE_PIXEL_SIZE = 128
 GRID_PIXEL_SIZE = SPRITE_PIXEL_SIZE * TILE_SCALING
 
-PLAYER_MOVEMENT_SPEED = 7
+PLAYER_MOVEMENT_SPEED = 9
 GRAVITY = 1
-PLAYER_JUMP_SPEED = 20
+PLAYER_JUMP_SPEED = 30
 
 
 class MyGame(arcade.Window):
@@ -46,7 +46,7 @@ class MyGame(arcade.Window):
         self.camera_sprites = arcade.Camera(self.width, self.height)
         self.camera_gui = arcade.Camera(self.width, self.height)
 
-        map_name = ":resources:tiled_maps/game_map1.json"
+        map_name = ":resources:tiled_maps/game_map2.json"
 
         layer_options = {
             "Platforms": {
