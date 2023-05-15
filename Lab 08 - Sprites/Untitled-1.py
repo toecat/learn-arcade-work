@@ -1,24 +1,18 @@
-"""
-Platformer Game
-"""
 import arcade
 
-# Constants
 SCREEN_WIDTH = 1000
 SCREEN_HEIGHT = 650
 SCREEN_TITLE = "Platformer"
 
-# Constants used to scale our sprites from their original size
 CHARACTER_SCALING = .3
 TILE_SCALING = 2
-COIN_SCALING = 0.5
+COIN_SCALING = .5
 SPRITE_PIXEL_SIZE = 128
 GRID_PIXEL_SIZE = SPRITE_PIXEL_SIZE * TILE_SCALING
 
-# Movement speed of player, in pixels per frame
-PLAYER_MOVEMENT_SPEED = 10
-GRAVITY = 1
-PLAYER_JUMP_SPEED = 20
+PLAYER_MOVEMENT_SPEED = 9
+GRAVITY = .89
+PLAYER_JUMP_SPEED = 23
 
 PLAYER_START_X = 64
 PLAYER_START_Y = 625
@@ -61,16 +55,11 @@ class MyGame(arcade.Window):
         # Keep track of the score
         self.score = 0
 
-        # Do we need to reset the score?
         self.reset_score = True
 
-        # Where is the right edge of the map?
-        #self.end_of_map = 0
-
-        # Level
+    
         self.level = 1
 
-        # Load sounds
         self.collect_coin_sound = arcade.load_sound(":resources:sounds/coin1.wav")
         self.jump_sound = arcade.load_sound(":resources:sounds/jump1.wav")
         self.game_over = arcade.load_sound(":resources:sounds/gameover1.wav")
@@ -238,9 +227,10 @@ class MyGame(arcade.Window):
             arcade.play_sound(self.game_over)
 
         # See if the user got to the end of the level
-        if self.player_sprite.center_x >= self.end_of_map:
+        if self.score == 23:
             # Advance to the next level
             self.level += 1
+            self.score =0
 
             # Make sure to keep the score from this level when setting up the next level
             self.reset_score = False
